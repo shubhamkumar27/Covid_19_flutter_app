@@ -16,6 +16,15 @@ Special thanks to [Novel Covid API](https://github.com/novelcovid/api) for provi
   <img src="Screenshots/Screenshot (72).png" width="200" hspace="20" />
 </p>
 
+## Development Setup
+- If you already have flutter and your preffered IDE installed on your system, move to next step. If not, please install flutter and all its requirements first. Refer this link : [Getting started with flutter](https://flutter.dev/docs/get-started/install) and complete all the steps.
+
+- Now, after completing flutter setup, clone this repository on your machine.
+    ```
+    git clone https://github.com/shubhamkumar27/Covid_19_flutter_app.git
+    ```
+- Now open your preferred IDE (I prefer Android Studio), and click on open the project directory which you cloned.
+
 ## Found a Bug ?
 If you find any bug or have any feature request, feel free to raise an issue or contact me on : shubhamkumar8180323@gmail.com
 
