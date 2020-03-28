@@ -7,7 +7,7 @@ It fetches the most recent data about corona virus cases from across the world a
 It also have a refresh button that will load the most recent data for you without restarting the app.
 
 ## Source of Data
-Special thanks to [Novel Corid API](https://github.com/novelcovid/api) for providing free APIs to fetch data. 
+Special thanks to [Novel Covid API](https://github.com/novelcovid/api) for providing free APIs to fetch data. 
 
 ## Screenshots
 <p align="middle">
@@ -17,4 +17,8 @@ Special thanks to [Novel Corid API](https://github.com/novelcovid/api) for provi
 </p>
 
 ## Found a Bug ?
-If you find any bug or have any feature request, feel free to raise an issue or if you want to contribute to this project please create a pull request.
+If you find any bug or have any feature request, feel free to raise an issue or contact me on : shubhamkumar8180323@gmail.com
+
+If you want to contribute to this project please create a pull request.
+
+#### If you liked ♥ this project, please hit that **STAR** button.
