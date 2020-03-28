@@ -1,17 +1,20 @@
 # covid19
 
-A Covid19 app that shows all statistics about it
+A Covid19 app that shows all statistics about it.
 
-## Getting Started
+It fetches the most recent data about corona virus cases from across the world and shows them in simple and easy to understand interface. It also gives the report of a particular country, which you can select.
 
-This project is a starting point for a Flutter application.
+It also have a refresh button that will load the most recent data for you without restarting the app.
 
-A few resources to get you started if this is your first Flutter project:
+## Source of Data
+Special thanks to [Novel Corid API](https://github.com/novelcovid/api) for providing free APIs to fetch data. 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Screenshots
+<p align="middle">
+  <img src="Screenshots/Screenshot (70).png" width="200" hspace="20" />
+  <img src="Screenshots/Screenshot (71).png" width="200" hspace="20" />
+  <img src="Screenshots/Screenshot (72).png" width="200" hspace="20" />
+</p>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# Covid_19_flutter_app" 
+## Found a Bug ?
+If you find any bug or have any feature request, feel free to raise an issue or if you want to contribute to this project please create a pull request.
