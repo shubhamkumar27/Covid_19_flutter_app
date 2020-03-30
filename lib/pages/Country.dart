@@ -24,31 +24,34 @@ class _CountrydataState extends State<Countrydata> {
       child: Top_bar(info: widget.info),
       ),
         Expanded(
-          child: Column(
+          child: ListView(
             children: <Widget>[
               SizedBox(height: 20,),
-              Container(
-                padding : EdgeInsets.fromLTRB(20, 0, 20, 0),
-                child: DropdownButton<String>(
-                  value: val,
-                  items: widget.countries.map<DropdownMenuItem<String>>((e){
-                    return DropdownMenuItem<String>(
-                      value: e,
-                      child: Text(e, style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                      ),),
-                    );
-                  }).toList(),
-                  onChanged: (String e) {
-                    setState(() {
-                      val = e;
-                    });
-                  },
-                ),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey, width: 2),
-                  borderRadius: BorderRadius.circular(20)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Container(
+                  padding : EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  child: DropdownButton<String>(
+                    value: val,
+                    items: widget.countries.map<DropdownMenuItem<String>>((e){
+                      return DropdownMenuItem<String>(
+                        value: e,
+                        child: Text(e, style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold
+                        ),),
+                      );
+                    }).toList(),
+                    onChanged: (String e) {
+                      setState(() {
+                        val = e;
+                      });
+                    },
+                  ),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey, width: 2),
+                    borderRadius: BorderRadius.circular(20)
+                  ),
                 ),
               ),
               Container(
@@ -61,14 +64,14 @@ class _CountrydataState extends State<Countrydata> {
                         child: Text(widget.map[val].name,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                              fontSize: 40,
+                              fontSize: 28,
                               fontWeight: FontWeight.bold
                           ),),
                       ),
                     ),
                     Container(
-                      height: 61,
-                      width: 90,
+                      height: 50,
+                      width: 60,
                       child:ClipRRect(
                         child : Image(
                           fit: BoxFit.cover,
@@ -90,12 +93,15 @@ class _CountrydataState extends State<Countrydata> {
                         Card(
                           child: Container(
                             padding: EdgeInsets.fromLTRB(5, 0, 5, 10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text("Cases", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.blue, ),),
-                                Text(widget.map[val].cases.toString(), style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold))
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text("Cases", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.blue, ),),
+                                  Text(widget.map[val].cases.toString(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -103,12 +109,15 @@ class _CountrydataState extends State<Countrydata> {
                         Card(
                           child: Container(
                             padding: EdgeInsets.fromLTRB(5, 0, 5, 10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text("Deaths", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.red),),
-                                Text(widget.map[val].deaths.toString(), style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold))
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text("Deaths", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.red),),
+                                  Text(widget.map[val].deaths.toString(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -116,12 +125,15 @@ class _CountrydataState extends State<Countrydata> {
                         Card(
                           child: Container(
                             padding: EdgeInsets.fromLTRB(5, 0, 5, 10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text("Recovered", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: Colors.green),),
-                                Text(widget.map[val].recovered.toString(), style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold))
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text("Recovered", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.green),),
+                                  Text(widget.map[val].recovered.toString(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -129,12 +141,15 @@ class _CountrydataState extends State<Countrydata> {
                         Card(
                           child: Container(
                             padding: EdgeInsets.fromLTRB(5, 0, 5, 10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text("Active", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.deepPurpleAccent),),
-                                Text(widget.map[val].active.toString(), style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold))
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text("Active", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.deepPurpleAccent),),
+                                  Text(widget.map[val].active.toString(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))
+                                ],
+                              ),
                             ),
                           ),
                         ),
