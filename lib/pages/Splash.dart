@@ -42,7 +42,7 @@ class _SplashscreenState extends State<Splashscreen> {
       }
       fetchall('https://corona.lmao.ninja/all').then((res){
         _info = jsonDecode(res.body.toString());
-        Navigator.push(context,MaterialPageRoute(
+        Navigator.pushReplacement(context,MaterialPageRoute(
             builder: (context) => Worldwide(value: value, info: _info, countries: _countries,map: _map,)));
       });
     });
