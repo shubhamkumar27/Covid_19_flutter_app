@@ -27,9 +27,7 @@ class _CountrydataState extends State<Countrydata> {
           child: ListView(
             children: <Widget>[
               SizedBox(height: 20,),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
+              Container(
                   padding : EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: DropdownButton<String>(
                     value: val,
@@ -53,7 +51,6 @@ class _CountrydataState extends State<Countrydata> {
                     borderRadius: BorderRadius.circular(20)
                   ),
                 ),
-              ),
               Container(
                 padding : EdgeInsets.fromLTRB(30, 30, 30, 20),
                 child : Row(
